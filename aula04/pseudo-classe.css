@@ -1,0 +1,28 @@
+/*
+Eu acho que os estilos são aplicados em sequência.
+- O estilo de `a:hover` sobre-escreve a propiedade `color` de `a:visited` ou de `a:link`.
+- O estilo de `a:active` sobre-escreve a propiedade `color` de `a:hover`.
+*/
+
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+    background-color: black;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+    background-color: white;
+    font-size: 200%;
+}
