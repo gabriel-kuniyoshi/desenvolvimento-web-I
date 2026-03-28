@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Caixinha</title>
+    </head>
+    <style>
+        #caixinha {
+            /* Content */
+            width: 500px;
+            height: 600px;
+            /* Padding */
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /* Border */
+            border-top: 10px solid black;
+            border-right: 10px solid black;
+            border-bottom: 10px solid black;
+            border-left: 10px solid black;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            /* Margin */
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            /* Background */
+            background-clip: content-box;
+            background-color: rgb(223, 216, 181);
+        }
+        h1 {
+            text-align: center;
+            /* Border */
+            border-width: 4px;
+            border-style: dashed;
+            border-color: black;
+            /* Background */
+            background-clip: border-box;
+            background-color: #bda68e;
+        }
+        code {
+            background-color: lightgray;
+        }
+    </style>
+    <body>
+        <div id="caixinha">
+            <h1>Caixinha</h1>
+            <p>Uma caixinha tem quatro camadas: <i>content</i>, <i>padding</i>, <i>border</i> e <i>margin</i>.</p>
+            <p>As propiedades <i>width</i> e <i>height</i> são relativas à camada <i>content</i>.</p>
+            <p>Note que margens verticais colapsam.</p>
+            <p>Com a regrinha <code>background-clip: content-box;</code>, a propiedade <i>background-color</i> pinta apenas a camada <i>content</i>. </p>
+        </div>
+    </body>
+</html>
