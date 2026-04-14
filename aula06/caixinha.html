@@ -1,6 +1,15 @@
+<!--
+Leitor de tela
+- O atributo lang do elemento html define a linguagem da página
+- Para palavras estrangeiras, utilize o atributo lang com valor adequado.
+
+"O elemento HTML <i> representa uma parte do texto que é destacada do restante
+por algum motivo, por exemplo, [...] expressões de outros idiomas [...]."
+-->
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
+        <meta charset="utf-8">
         <title>Caixinha</title>
     </head>
     <style>
@@ -48,10 +57,10 @@
     <body>
         <div id="caixinha">
             <h1>Caixinha</h1>
-            <p>Uma caixinha tem quatro camadas: <i>content</i>, <i>padding</i>, <i>border</i> e <i>margin</i>.</p>
-            <p>As propiedades <i>width</i> e <i>height</i> são relativas à camada <i>content</i>.</p>
+            <p>Uma caixinha tem quatro camadas: <i lang="en">content</i>, <i lang="en">padding</i>, <i lang="en">border</i> e <i lang="en">margin</i>.</p>
+            <p>As propiedades <i lang="en">width</i> e <i lang="en">height</i> são relativas à camada <i lang="en">content</i>.</p>
             <p>Note que margens verticais colapsam.</p>
-            <p>Com a regrinha <code>background-clip: content-box;</code>, a propiedade <i>background-color</i> pinta apenas a camada <i>content</i>. </p>
+            <p>Com a regrinha <code lang="en">background-clip: content-box;</code>, a propiedade <i lang="en">background-color</i> pinta apenas a camada <i lang="en">content</i>. </p>
         </div>
     </body>
 </html>
