@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Flexbox com Javascript</title>
+        <link rel="stylesheet" href="interativo.css" />
+        <script src="interativo.js"></script>
+    </head>
+    <body>
+        <span class="mais-ou-menos">
+            <button type="button" onclick="diminuirLargura()">-</button>
+            <span>Largura</span>
+            <button type="button" onclick="aumentarLargura()">+</button>
+        </span>
+        <span class="mais-ou-menos">
+            <button type="button" onclick="diminuirAltura()">-</button>
+            <span>Altura</span>
+            <button type="button" onclick="aumentarAltura()">+</button>
+        </span>
+        <div>
+            <span>flex-direction:</span>
+            <button type="button" onclick="document.getElementById('flex-container').style.flexDirection = 'row'">
+                row
+            </button>
+            <button type="button" onclick="document.getElementById('flex-container').style.flexDirection = 'row-reverse'">
+                row-reverse
+            </button>
+            <button type="button" onclick="document.getElementById('flex-container').style.flexDirection = 'column'">
+                column
+            </button>
+            <button type="button" onclick="document.getElementById('flex-container').style.flexDirection = 'column-reverse'">
+                column-reverse
+            </button>
+        </div>
+        <span>
+            <label for="align-items">align-items:</label>
+            <select id="align-items" onchange="atualizarAlignItems()">
+                <option>stretch</option>
+                <option>flex-start</option>
+                <option>center</option>
+                <option>flex-end</option>
+            </select>
+        </span>
+        <span>
+            <label for="align-content">align-content:</label>
+            <select id="align-content" onchange="atualizarAlignContent()">
+                <option>normal</option>
+                <option>flex-start</option>
+                <option>center</option>
+                <option>flex-end</option>
+                <option>space-between</option>
+                <option>space-around</option>
+                <option>space-evenly</option>
+            </select>
+        </span>
+        <div>
+            <button type="button" onclick="inserirElemento()">Inserir elemento</button>
+            <button type="button" onclick="removerElemento()">Remover elemento</button>
+        </div>
+
+        <div id="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </body>
+</html>
