@@ -1,0 +1,59 @@
+.container-fluid {
+    padding: 0 !important;
+}
+
+/* Navbar do Mercado Livre */
+/* ----------------------- */
+.bg-yellow {
+    background-color: #FFE600;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.w-33 {
+    width: 33%;
+}
+
+.w-66 {
+    width: 66%;
+}
+
+/* Carrossel do Mercado Livre */
+/* -------------------------- */
+.carousel-item {
+    /* O valor padrão é .6s */
+    transition: transform .1s ease-in-out !important;
+}
+
+.carousel-indicators button {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50%;
+    /* O valor padrão é .6s */
+    transition: opacity .1s ease !important;
+}
+
+/* Cards do Mercado Livre */
+/* ---------------------- */
+#meus-cards img {
+    width: 105px;
+}
+
+#meus-cards > * {
+    flex-shrink: 0;
+    width: 14em;
+}
+
+#meus-cards .card-header {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

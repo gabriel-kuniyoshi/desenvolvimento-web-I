@@ -1,0 +1,12 @@
+.carousel-item {
+    /* O valor padrão é .6s */
+    transition: transform .1s ease-in-out !important;
+}
+
+.carousel-indicators button {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50%;
+    /* O valor padrão é .6s */
+    transition: opacity .1s ease !important;
+}

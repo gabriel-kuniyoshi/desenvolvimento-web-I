@@ -1,0 +1,14 @@
+#meus-cards img {
+    width: 105px;
+}
+
+#meus-cards > * {
+    flex-shrink: 0;
+    width: 14em;
+}
+
+#meus-cards .card-header {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
