@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 3 - Quiz</title>
+        <script>
+            function verificar() {
+                let val = document.forms["myForm"].elements["01"].value;
+
+                if (val == "") {
+                    alert("Por favor, selecione uma alternativa.");
+                } else if (val == "df") {
+                    alert("Certa resposta!");
+                } else {
+                    alert("Resposta incorreta!");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Qual é a capital do Brasil?
+        <br />
+        <form id="myForm">
+            <!-- Radio buttons are grouped by the name attribute -->
+            <input type="radio" name="01" value="sp"/> <span>São Paulo</span>
+            <br />
+            <input type="radio" name="01" value="rj"/> <span>Rio de Janeiro</span>
+            <br />
+            <input type="radio" name="01" value="mg"/> <span>Minas Gerais</span>
+            <br />
+            <input type="radio" name="01" value="df"/> <span>Brasília</span>
+        </form>
+        <br />
+        <button type="button" onclick="verificar()">Verificar</button>
+
+    </body>
+</html>

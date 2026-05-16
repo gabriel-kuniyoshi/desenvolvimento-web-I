@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 2 - Limpando o conteúdo</title>
+        <style>
+            #bloco {
+                width: 400px;
+                height: 400px;
+                background-color: black;
+
+                color: white;
+                font-size: 20pt;
+                text-align: center;
+                align-content: center;
+            }
+        </style>
+        <script>
+            function atualizarBloco() {
+                let text = document.getElementById('input-text')
+                let bloco = document.getElementById('bloco')
+                bloco.innerHTML = text.value
+            }
+        </script>
+    </head>
+    <body>
+        <span>Caixa de texto: </span>
+        <input id="input-text" type="text" placeholder="digite seu texto"/>
+        <button type="button" onclick="atualizarBloco()">Click</button>
+        <div id="bloco">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 6 - Simulador de Semáforo</title>
+        <style>
+            #semaforo {
+                /* Cores */
+                background-color: black;
+
+                /* Flexbox */
+                display: flex;
+                flex-direction: column;
+
+                /* Espaçamento */
+                width: 100px;
+                padding: 50px 50px 50px 50px;
+                gap: 50px;
+            }
+
+            #semaforo > * {
+                display: block;
+                border-radius: 50px;
+                width: 100px;
+                height: 100px;
+            }
+
+            #semaforo > *:hover {
+                cursor: pointer;
+            }
+
+            #vermelho {
+                background-color: red;
+            }
+
+            #amarelo {
+                background-color: grey;
+            }
+
+            #verde {
+                background-color: grey;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Semáforo (clique!) </h1>
+        <div id="semaforo">
+            <div id="vermelho" onclick="acenderVermelho()">
+            </div>
+            <div id="amarelo" onclick="acenderAmarelo()">
+            </div>
+            <div id="verde" onclick="acenderVerde()">
+            </div>
+        </div>
+
+        <script>
+            let vermelho = document.getElementById("vermelho");
+            let amarelo = document.getElementById("amarelo");
+            let verde = document.getElementById("verde");
+
+            function acenderVermelho() {
+                vermelho.style.backgroundColor="red";
+                amarelo.style.backgroundColor="grey";
+                verde.style.backgroundColor="grey";
+            }
+
+            function acenderAmarelo() {
+                vermelho.style.backgroundColor="grey";
+                amarelo.style.backgroundColor="yellow";
+                verde.style.backgroundColor="grey";
+            }
+
+            function acenderVerde() {
+                vermelho.style.backgroundColor="grey";
+                amarelo.style.backgroundColor="grey";
+                verde.style.backgroundColor="green";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 7 - Gerador de Tabuada</title>
+        <style>
+        #tabuada {
+            display: none;
+            font-size: 12pt;
+            color: white;
+            background-color: black;
+            padding: 30px;
+            width: fit-content;
+        }
+        </style>
+    </head>
+    <body>
+        <label>
+            Tabulada do número:
+            <input id="x" type="text" placeholder="7" size="2" maxlength="2">
+        </label>
+        <button type="button" onclick="gerarTabuada()">
+            Gerar tabuada
+        </button>
+        <pre id="tabuada">
+        </pre>
+
+        <script>
+            function gerarTabuada() {
+                let x = document.getElementById("x").value;
+                x = parseInt(x);
+                if (Number.isNaN(x)) {
+                    alert("Por favor, insira um número.");
+                    return;
+                }
+
+
+                // Limpar tabuada
+                let tabuada = document.getElementById("tabuada");
+                tabuada.innerHTML = "";
+                tabuada.style.display = "block";
+
+                // Fazer tabuada
+                for (let i = 1; i <= 10; i += 1) {
+                    linha = document.createElement('p');
+                    linha.innerHTML = x + " &times ";
+                    linha.innerHTML += String(i).padStart(2);
+                    linha.innerHTML += " = "
+                    linha.innerHTML += String(x*i).padStart(3);
+                    tabuada.appendChild(linha);
+                }
+            }
+        </script>
+    </body>
+</html>
