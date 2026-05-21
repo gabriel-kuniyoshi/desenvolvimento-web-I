@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 4 - Lista de tarefas</title>
+        <script>
+            function adicionarTarefa() {
+                let caixa = document.getElementById('input-text');
+                let text = caixa.value;
+                if (text === '') {
+                    alert("Por favor, insira uma tarefa.")
+                    return
+                }
+                let bloco = document.getElementById('bloco');
+
+                // Inserir <label><input type="checkbox">TEXTO</label><br>
+                let label = document.createElement('label');
+                let checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                label.appendChild(checkbox);
+                let labelText = document.createTextNode(text);
+                label.appendChild(labelText);
+                bloco.appendChild(label);
+                let lineBreak = document.createElement('br');
+                bloco.appendChild(lineBreak);
+
+                // Limpar texto da caixa de texto
+                caixa.value = '';
+            }
+
+            function limparTarefasFeitas() {
+                let checked = document.querySelectorAll('#bloco input[type="checkbox"]:checked');
+                for (let i = 0; i < checked.length; i += 1) {
+                    // Remove <br>, then remove <label>
+                    checked[i].parentElement.nextElementSibling.remove()
+                    checked[i].parentElement.remove()
+                }
+            }
+
+            function limparTudo() {
+                let bloco = document.getElementById('bloco');
+                while (bloco.firstChild) {
+                    bloco.firstChild.remove()
+                }
+                // bloco.innerHTML = '' // Também funciona
+            }
+        </script>
+    </head>
+    <body>
+        <span>Tarefa: </span>
+        <input id="input-text" type="text" placeholder="Comprar areia para o gato"/>
+        <button type="button" onclick="adicionarTarefa()">Adicionar tarefa</button>
+        <button type="button" onclick="limparTarefasFeitas()">Limpar tarefas feitas</button>
+        <button type="button" onclick="limparTudo()">Limpar tudo</button>
+        <div id="bloco">
+        </div>
+    </body>
+</html>
